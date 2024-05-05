@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class to represent a Vehicle object.
@@ -10,7 +8,7 @@ public abstract class Vehicle {
     // Attributes
     private final int WHEELS;
     private final FuelType FUEL_TYPE;
-
+    private Owner owner;
     // Constructor(s)
 
     /**
@@ -18,9 +16,10 @@ public abstract class Vehicle {
      * @param wheels
      * @param fuelType
      */
-    public Vehicle(int wheels, FuelType fuelType) {
+    public Vehicle(int wheels, FuelType fuelType, Owner owner) {
         this.WHEELS = wheels;
         this.FUEL_TYPE = fuelType;
+        this.owner = owner;
     }
 
     // Accessors
@@ -30,6 +29,10 @@ public abstract class Vehicle {
 
     public FuelType getFuelType() {
         return this.FUEL_TYPE;
+    }
+
+    public Owner getOwner() {
+        return this.owner;
     }
 
 }
