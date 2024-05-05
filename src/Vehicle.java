@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Class to represent a Vehicle object.
  * This is used as a blueprint for vehicles, hence being Abstract.
@@ -5,34 +8,28 @@
 public abstract class Vehicle {
 
     // Attributes
-    private int wheels;
-    private int doors;
-    private FuelType fuelType;
+    private final int WHEELS;
+    private final FuelType FUEL_TYPE;
 
     // Constructor(s)
 
     /**
      *
      * @param wheels
-     * @param doors
      * @param fuelType
      */
-    public Vehicle(int wheels, int doors, FuelType fuelType) {
-        this.wheels = wheels;
-        this.doors = doors;
-        this.fuelType = fuelType;
+    public Vehicle(int wheels, FuelType fuelType) {
+        this.WHEELS = wheels;
+        this.FUEL_TYPE = fuelType;
     }
 
     // Accessors
     public int getWheels() {
-        return wheels;
-    }
-
-    public int getDoors() {
-        return doors;
+        return this.WHEELS;
     }
 
     public FuelType getFuelType() {
-        return fuelType;
+        return this.FUEL_TYPE;
     }
+
 }
